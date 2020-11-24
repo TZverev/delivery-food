@@ -1,0 +1,74 @@
+.promo {
+    position: relative;
+    overflow: hidden;
+    width: 1200px;
+    max-height: 300px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #302C34;
+    filter: drop-shadow(0px 7px 12px rgba(158, 158, 163, 0.1));
+}
+
+.promo-element {
+    display: flex;
+    height: 300px;
+    padding: 0 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.promo-element div {
+    width: 600px;
+}
+
+.promo ul {
+    list-style: none;
+    width: 99999px;
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+}
+
+.promo li {
+    display: inline-block;
+    width: 1200px;
+}
+
+.switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+
+}
+
+.switcher-button {
+    position: relative;
+    top: 10px;
+    border-radius: 50%;
+    border: solid 2px #302C34 ;
+    height: 6px;
+    width: 6px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all .5s; 
+}
+
+.active {
+    background-color:  #302C34;
+}
+
+.first {
+    background-color: #FFF1B8;
+    background-image: url(../img/promo-first.svg);
+    background-repeat: no-repeat;
+    background-position: top right -200px;
+}
+
+.second {
+    background-color: #EFDBFF;
+    background-image: url(../img/promo-second.jpeg);
+    background-repeat: no-repeat;
+    background-position: top right -200px;
+    background-size: 800px;
+}

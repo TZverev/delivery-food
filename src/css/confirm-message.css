@@ -1,0 +1,27 @@
+.confirm-message {
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 40px 45px;
+    min-width: 400px;
+    text-align: center;
+}
+
+.confirm-message p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    color: #000000;
+}
+
+.confirm-message-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.confirm-message-buttons .button {
+    display: flex;
+    justify-content: center;
+    min-width: 80px;
+}

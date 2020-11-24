@@ -1,0 +1,194 @@
+.auth-box {
+    background: #FFFFFF;
+    border-radius: 5px;     
+    padding: 40px 45px;
+}
+
+.auth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.closeButton {
+    font-weight: bold;
+    font-size: 26px;
+    color: #000;
+    opacity: 1;
+}
+.closeButton:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.form-control {
+    margin: 8px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input {
+    width: 100%;
+}
+
+.first-input-pass{
+    width: 50%;
+    margin-right: 32px;
+}
+
+
+.error-message {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: red;
+    min-height: 18px;
+}
+
+.form-box {
+    margin-top: 30px;
+    min-width: 498px;
+}
+
+.message {
+    margin: 40px 0 ;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8C8C8C;
+}
+
+.centr {
+    display: flex;
+    justify-content: center;
+}
+
+.edit{
+    display: flex;
+    align-items: baseline;
+}
+
+.edit-icon {
+    font-size: 24px;
+    opacity: .40;
+}
+
+.edit-icon:hover{
+    opacity: .70;
+}
+
+.account-name{
+    margin-right: 20px;
+}
+
+.name-input{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    padding: 1px 2px 1px 0;
+    margin-right: 20px;
+}
+
+.name-input-edit{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    border: none;
+    border-bottom: 1px solid #D9D9D9;
+    max-width: 300px;
+    margin-top: 5px;
+    padding: 1px 2px 1px 0;
+}
+
+.account-holder{
+    height: 40px;
+    width: 50%;
+}
+
+.orders,
+.orders-list{
+    margin-top: 44px;
+}
+
+.order-time{
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8C8C8C;
+}
+
+.forgetPass{
+    color: #1890FF;
+    cursor: pointer;
+}
+
+.order-item,
+.order-item-right,
+.order-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-footer{
+    padding-top: 24px;
+}
+
+.order-item{
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.order-box {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    margin: 15px 0;
+}
+
+.order-box-main {
+    display: flex;
+    align-items: flex-start;
+}
+
+.order-box-right {
+    margin: 24px 24px 0 24px;
+    width: 768px;
+}
+
+.products-list{
+    height: 100px;
+    overflow: hidden;
+}
+
+.order-show-more{
+    text-align: center;
+    color:#8C8C8C;
+    font-size: 20px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.order-show-more:hover{
+    background-color: #f8f8f8;
+    -webkit-box-shadow: 0px 5px 16px -5px rgba(255, 255, 255, 0.6) inset;
+    -moz-box-shadow: 0px 5px 16px -5px rgba(255, 255, 255, 0.6) inset;
+    box-shadow: 0px 5px 16px -5px rgba(255, 255, 255, 0.6) inset;
+}

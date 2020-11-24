@@ -1,0 +1,149 @@
+.restorant-page-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.restorant-name {
+    margin-right: 30px;
+}
+
+.restorant-page .rating-new {
+    margin-top: 4px;
+}
+
+.restorant-page-products {
+    margin-top: 44px;
+}
+
+.products-area {
+    margin: 40px 0;
+    width: 1224px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.product-card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    width: 384px;
+    margin: 15px 0;
+    margin-right: 24px;
+}
+
+.product-card:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.product-info {
+    margin-bottom: 24px;
+    height: 84px;
+}
+
+.product-card-body {
+    padding: 24px;
+    padding-bottom: 30px;
+}
+
+.product-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.composition {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8C8C8C;
+    opacity: 0.54;
+}
+
+.composition-holder {
+    margin-top: 10px;
+    height: 42px;
+    width: 336px;
+}
+
+.price {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000;
+    margin: 0 22px;
+}
+
+.sum-price {
+    background: #262626;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FAFAFA;
+    padding: 10px 15px;
+}
+
+.product-img {
+    height: 212px;
+    width: 384px;
+}
+
+.name-holder {
+    height: 30px;
+    width: 336px;
+}
+
+.button-holder {
+    height: 40px;
+    width: 210px;
+}
+
+.shopping-cart-button img {
+    margin-left: 4px;
+    margin-right: 0;
+}
+
+.restorant-page-info-holder {
+    width: 600px;
+    height: 42px;
+}
+
+.low-button {
+    background: #FFFFFF;
+    border: 1px solid #40A9FF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #40A9FF;
+    width: 41px;
+    height: 32px;
+    margin: 0 4px;
+}
+
+.low-button-contanier,
+.shopping-cart-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+    height: 45px;
+}
+
+.low-button-contanier p {
+    width: 35px;
+    text-align: center;
+}
+
+.product-card-bottom-left {
+    display: flex;
+    align-items: center;
+}
+
+.product-card-bottom .sum-price {
+    margin: 0;
+}
