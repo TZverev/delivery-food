@@ -79,7 +79,7 @@ function OrderElement({ order }) {
     if (!isReady) {
         return (
             <div>
-                Loading....
+                Loading..............
             </div>
         )
     }
