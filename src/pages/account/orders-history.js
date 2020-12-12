@@ -78,15 +78,27 @@ function OrderElement({ order }) {
 
     if (!isReady) {
         return (
-            <div>
-                Loading..............
+            <div className='order-box order-box-holder' >
+                <div className='order-box-main'>
+                    <div className='animated-background order-box-img-holder' />
+                    <div className='order-box-right'>
+                        <div className='order-h3-holder animated-background' />
+                        <div className='products-list'>
+                            <div className='animated-background product-holder order-item' />
+                            <div className='animated-background product-holder order-item' />
+                        </div>
+                        <div className='order-footer'>
+                            <div className='order-h3-holder animated-background' />
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
     return (
         <div className='order-box'>
             <div className='order-box-main'>
-                <div>
+                <div className='order-img'>
                     <img
                         src={img}
                         alt={order.restorantName} />
@@ -109,9 +121,6 @@ function OrderElement({ order }) {
                         <div className='sum-price'>
                             {`${order.sum} ₽`}
                         </div>
-                    </div>
-                    <div className='order-show-more'>
-                        ﹀
                     </div>
                 </div>
             </div>

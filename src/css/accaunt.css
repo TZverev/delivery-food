@@ -160,19 +160,37 @@
     margin: 15px 0;
 }
 
+.order-img {
+    min-width: 384px;
+    min-height: 250px;
+}
+
+.order-box-holder{
+    height: 250px;
+}
+
+.order-h3-holder {
+    height: 25px;
+    width: 200px;
+}
+
+.order-box-img-holder {
+    height: 250px;
+    width: 384px;
+}
+
+.product-holder{
+    height: 43px;
+}
+
 .order-box-main {
     display: flex;
     align-items: flex-start;
 }
 
 .order-box-right {
-    margin: 24px 24px 0 24px;
+    margin: 24px;
     width: 768px;
-}
-
-.products-list{
-    height: 100px;
-    overflow: hidden;
 }
 
 .order-show-more{
