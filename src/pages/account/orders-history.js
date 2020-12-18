@@ -79,17 +79,16 @@ function OrderElement({ order }) {
     if (!isReady) {
         return (
             <div className='order-box order-box-holder' >
-                <div className='order-box-main'>
-                    <div className='animated-background order-box-img-holder' />
-                    <div className='order-box-right'>
+                <div className='order-box-header'>
+                    <div className='order-box-img animated-background' />
+                    <div>
                         <div className='order-h3-holder animated-background' />
-                        <div className='products-list'>
-                            <div className='animated-background product-holder order-item' />
-                            <div className='animated-background product-holder order-item' />
-                        </div>
-                        <div className='order-footer'>
-                            <div className='order-h3-holder animated-background' />
-                        </div>
+                        <div className='order-h3-holder animated-background' />
+                    </div>
+                </div>
+                <div className='order-box-list'>
+                    <div className='order-footer'>
+                        <div className='order-box-sum-holder animated-background' />
                     </div>
                 </div>
             </div>
@@ -97,27 +96,27 @@ function OrderElement({ order }) {
     }
     return (
         <div className='order-box'>
-            <div className='order-box-main'>
-                <div className='order-img'>
-                    <img
-                        src={img}
-                        alt={order.restorantName} />
-                </div>
-                <div className='order-box-right'>
+            <div className='order-box-header'>
+                <img className='order-box-img'
+                    src={img}
+                    alt={order.restorantName} />
+                <div>
                     <h3>
                         {order.restorantName}
                     </h3>
-                    <div className='products-list'>
-                        {order.productObjList.map((item) => {
-                            return (
-                                <ProductElement
-                                    key={item.name}
-                                    item={item} />
-                            )
-                        })}
-                    </div>
+                    <OrderTime time={order.time} />
+                </div>
+            </div>
+            <div className='order-box-list'>
+                <div className='products-list'>
+                    {order.productObjList.map((item) => {
+                        return (
+                            <ProductElement
+                                key={item.name}
+                                item={item} />
+                        )
+                    })}
                     <div className='order-footer'>
-                        <OrderTime time={order.time} />
                         <div className='sum-price'>
                             {`${order.sum} ₽`}
                         </div>
