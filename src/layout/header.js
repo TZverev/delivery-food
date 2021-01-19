@@ -62,7 +62,7 @@ const Buttons = observer(({ data }) => {
                 <Switch>
                     <Route path='/account'>
                         <button
-                            className='primary-button'
+                            className='primary-button header-button'
                             onClick={exit}>
                             <span>Выход</span>
                         </button>
@@ -70,7 +70,7 @@ const Buttons = observer(({ data }) => {
                     <Route path='/'>
                         <Link to='/account'>
                             <button
-                                className='primary-button'>
+                                className='primary-button header-button'>
                                 <img src={user} alt='user' />
                                 <span>Кабинет</span>
                             </button>
@@ -78,6 +78,7 @@ const Buttons = observer(({ data }) => {
                     </Route>
                 </Switch>
                 <button
+                    className='header-button'
                     onClick={showShoppingCart}>
                     <img src={shop} alt='user' />
                     <span>Корзина</span>
@@ -92,13 +93,13 @@ const Buttons = observer(({ data }) => {
     return (
         <div className='buttons'>
             <button
-                className='primary-button button'
+                className='primary-button button header-button'
                 onClick={showAuth}>
                 <img src={user} alt='user' />
                 <span>Войти</span>
             </button>
             <button
-                className={'button'}
+                className='button header-button'
                 onClick={showShoppingCart}>
                 <img src={shop} alt='user' />
                 <span>Корзина</span>
@@ -116,7 +117,6 @@ function Header() {
                 <Link to='/'>
                     <img src={logo} alt='logo' />
                 </Link>
-                <input className='input-search input-address' placeholder='Адрес доставки' />
                 <Buttons data={userData} />
             </div >
         </header >

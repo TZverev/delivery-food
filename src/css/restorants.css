@@ -3,7 +3,7 @@
 }
 
 .restorants-area {
-    width: 1224px;
+    max-width: 1200px;
     margin-top: 44px;
     display: flex;
     justify-content: left;
@@ -29,9 +29,9 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
     border-radius: 7px;
     width: 384px;
-    height: 378px;
-    margin: 15px 0;
-    margin-right: 24px;
+    margin: 6px;
+    padding-bottom: 20px;
+    overflow: hidden;
 }
 
 .restorant-card img {
@@ -132,4 +132,58 @@
     line-height: 18px;
     margin-right: 26px;
     max-height: 20px;
+}
+
+
+@media screen and (max-width: 375px) {
+    .restorants-area {
+        max-width: 355px;
+        justify-content: center;
+    }
+    .input-restorants {
+        max-width: 150px;
+    }
+
+    .restorant-card {
+        max-width: 355px;
+    }
+
+    .restorant-card span {
+        font-size: .75em;
+    }
+
+    .restorant-img {
+        max-width: 355px;
+    }
+
+    footer{
+        max-height: 150px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .restorants-area {
+        max-width: 300px;
+        justify-content: center;
+    }
+    .input-restorants {
+        max-width: 150px;
+    }
+
+    .restorant-card {
+        max-width: 300px;
+    }
+
+    .restorant-card span {
+        font-size: .75em;
+    }
+
+    .restorant-img {
+        max-width: 300px;  
+        max-height: 196px;
+    }
+
+    footer{
+        max-height: 150px;
+    }
 }

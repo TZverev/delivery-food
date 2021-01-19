@@ -1,7 +1,7 @@
 .promo {
     position: relative;
     overflow: hidden;
-    width: 1200px;
+    max-width: 1200px;
     max-height: 300px;
     border-radius: 10px;
     font-size: 20px;
@@ -38,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1200px;
+    max-width: 1200px;
 
 }
 
@@ -72,3 +72,33 @@
     background-position: top right -200px;
     background-size: 800px;
 }
+
+@media screen and (max-width:375px){
+    .promo,
+    .switcher,
+    .promo-element {
+        max-width: 355px;
+        max-height: 150px;
+      }
+    .promo-element {
+        font-size: .5em;
+        padding-right: 100px;
+        background-size: 400px;
+        background-position: top right -150px;
+    }
+}
+
+@media screen and (max-width:320px){
+    .promo,
+    .switcher,
+    .promo-element {
+        max-width: 300px;
+        max-height: 150px;
+      }
+    .promo-element {
+        font-size: .5em;
+        padding-right: 100px;
+        background-size: 400px;
+        background-position: top right -150px;
+    }
+}   

@@ -136,7 +136,7 @@
     cursor: pointer;
 }
 
-.order-item,
+.order-item ,
 .order-item-right{
     display: flex;
     justify-content: space-between;
@@ -164,7 +164,7 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
     border-radius: 7px;
     margin: 15px 0;
-    width: 70%;
+    max-width: 70%;
 }
 
 .order-box-header{
@@ -194,4 +194,24 @@
 
 .order-box-list {
     padding: 24px;
+}
+
+@media screen and (max-width: 425px) {
+    .order-box {
+        max-width: 405px;
+    }
+
+    .order-item {
+        flex-wrap: wrap;
+    }
+
+    .order-item {
+        display: block;
+    }
+
+    .order-item-right .price,
+    .order-item-right .sum-price{
+        margin: 0;
+        font-size: 16px;
+    }
 }

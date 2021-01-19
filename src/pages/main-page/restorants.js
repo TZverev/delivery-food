@@ -184,7 +184,6 @@ function Restorants() {
         <section className='restorants'>
             <div className='header-restorants'>
                 <h2>Рестораны</h2>
-                <input placeholder='Поиск блюд и ресторанов' className='input-search input-restorants' />
             </div>
             <RestorantsList data={catalog} />
         </section>
