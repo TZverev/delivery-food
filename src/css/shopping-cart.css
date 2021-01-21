@@ -22,6 +22,10 @@
     align-items: center;
 }
 
+.shopping-cart-footer{
+    margin-top: 35px;
+}
+
 .shopping-cart-main {
     margin: 35px 0;
 }
@@ -74,6 +78,34 @@
     width: 123px;
     display: flex;
     justify-content: center;
+}
+
+.suggestions-wrapper {
+    min-width: 740px;
+    background: #FFFFFF;
+    padding-left: 15px;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: absolute;
+    cursor: default;
+    z-index: 999999;
+}
+
+.suggestion{
+    list-style-type: none;
+    padding: 4px 0;
+}
+
+.address-input {
+    width: 100%;
+}
+
+.address-message {
+    color: #8C8C8C;
+    margin: 5px 0;
+    font-size: 14px;
+    list-style-type: none;
 }
 
 @media screen and (max-width:425px) {

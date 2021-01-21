@@ -8,6 +8,7 @@ import ConfirmMessage from '../modules/confirm-message.js';
 import { userData } from '../pages/account/account-data';
 import { db } from '../firebase';
 import { LoadingOutlined } from '@ant-design/icons';
+import Address from './address-finder';
 
 export function Modal(props) {
 
@@ -42,6 +43,7 @@ class ShoppingCartData {
     productObjList = [];
     sum = 0;
     wouldChangeRestorant = null;
+    address = null;
 
     constructor() {
         makeAutoObservable(this);
@@ -62,6 +64,10 @@ class ShoppingCartData {
         ).reduce((sum, current) => {
             return sum + current
         }, 0)
+    }
+
+    addAddress(address) {
+        this.address = address;
     }
 
     addProduct({ restorantImg, restorantName, restorantId, product }) {
@@ -117,6 +123,7 @@ class ShoppingCartData {
         this.productIdList = [];
         this.productObjList = [];
         this.sum = 0;
+        this.address = null;
     }
 }
 
@@ -196,12 +203,23 @@ export function scrollBar() {
     return windowsWidth - documentWidth
 }
 
-function OrderButton({ createOrder, isLoadingOrder }) {
+const OrderButton = observer(({ orderData, createOrder, isLoadingOrder }) => {
+
+    const [isDisabled, setIsDisabled] = useState(true);
 
     function order() {
         createOrder();
         productsData.clearData();
     }
+
+    useEffect(() => {
+        if (orderData.address) {
+            setIsDisabled(false)
+        }
+        return () => {
+            setIsDisabled(true)
+        }
+    }, [orderData.address])
 
     if (isLoadingOrder) {
         return (
@@ -212,13 +230,14 @@ function OrderButton({ createOrder, isLoadingOrder }) {
     } else {
         return (
             <button
+                disabled={isDisabled}
                 onClick={order}
                 className='primary-button button'>
                 Оформить заказ
             </button>
         )
     }
-}
+})
 
 const ShoppingCartFooter = observer((props) => {
 
@@ -263,28 +282,32 @@ const ShoppingCartFooter = observer((props) => {
 
     if (props.data.sum) {
         return (
-            <div className='shopping-cart-footer'>
-                {isMessageShown && <ConfirmMessage
-                    message='Хотите очистить корзину?'
-                    yesClick={props.data.clearData}
-                    noClick={() => {
-                        setIsMessageShown(false);
-                    }}
-                />}
-                <div className='sum-price'>
-                    {`${props.data.sum} ₽`}
-                </div>
-                <div className='buttons'>
-                    <OrderButton
-                        isLoadingOrder={isLoadingOrder}
-                        createOrder={createOrder} />
-                    <button
-                        onClick={() => {
-                            setIsMessageShown(true);
+            <div>
+                <Address />
+                <div className='shopping-cart-footer'>
+                    {isMessageShown && <ConfirmMessage
+                        message='Хотите очистить корзину?'
+                        yesClick={props.data.clearData}
+                        noClick={() => {
+                            setIsMessageShown(false);
                         }}
-                        className='button'>
-                        Очистить
+                    />}
+                    <div className='sum-price'>
+                        {`${props.data.sum} ₽`}
+                    </div>
+                    <div className='buttons'>
+                        <OrderButton
+                            orderData={productsData}
+                            isLoadingOrder={isLoadingOrder}
+                            createOrder={createOrder} />
+                        <button
+                            onClick={() => {
+                                setIsMessageShown(true);
+                            }}
+                            className='button'>
+                            Очистить
                     </button>
+                    </div>
                 </div>
             </div>
         )
