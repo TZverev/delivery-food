@@ -78,8 +78,7 @@ const AuthBox = observer((props) => {
                         }}
                         forgetPass={() => {
                             setCondition('forgetPass')
-                        }} />
-                }
+                        }} />}
             </div>
         )
     } else if (condition === 'registration') {
@@ -99,8 +98,7 @@ const AuthBox = observer((props) => {
                     <Registration
                         login={() => {
                             setCondition('login')
-                        }} />
-                }
+                        }} />}
             </div>
         )
     } else if (condition === 'forgetPass') {
@@ -120,8 +118,7 @@ const AuthBox = observer((props) => {
                     <ForgetPass
                         login={() => {
                             setCondition('login')
-                        }} />
-                }
+                        }} />}
             </div>
         )
     }
@@ -130,7 +127,7 @@ const AuthBox = observer((props) => {
 
 export function Verification(props) {
     return (
-        <div>
+        <>
             <p className='message'>
                 Вам выслано письмо на электронную почту. Активируйте аккаунт по ссылке из письма.
             </p>
@@ -141,7 +138,7 @@ export function Verification(props) {
                     Хорошо
             </button>
             </div>
-        </div>
+        </>
     )
 }
 
@@ -246,7 +243,7 @@ function ForgetPass(props) {
 
     return (
         (isChangeDone ?
-            <div >
+            <>
                 <div className='center'>
                     <p className='message'>
                         На вашу почту отправлено письмо для смены пароля.
@@ -258,7 +255,7 @@ function ForgetPass(props) {
                         Назад
                 </button>
                 </div>
-            </div > :
+            </> :
             <form
                 onSubmit={(e) => {
                     changePass(e)
@@ -290,9 +287,7 @@ function ForgetPass(props) {
                         Назад
                 </button>
                 </div>
-
             </form>)
-
     )
 }
 
@@ -369,9 +364,6 @@ function Registration(props) {
                     placeholder='Имя'
                 />
             </div>
-            <p className='error-message'>
-
-            </p>
             <div className='form-control'>
                 <input
                     value={email}

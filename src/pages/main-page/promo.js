@@ -3,7 +3,7 @@ import '../../css/promo.css';
 import '../../img/promo-first.svg';
 import '../../img/promo-second.jpeg'
 
-function Element(props) {
+function PromoElement(props) {
     return (
         <div className={`${props.class} promo-element`} >
             <div>
@@ -79,28 +79,28 @@ function Carusel(props) {
 }
 
 
-let firstPromo = <Element
+let firstPromo = <PromoElement
     heading={'Онлайн-сервис доставки еды на дом'}
     text='Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком'
     class='first'
     id={0}
 />
 
-let secondPromo = <Element
+let secondPromo = <PromoElement
     heading='Быстрая и дешевая еда'
     text='Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком'
     class='second'
     id={1}
 />
 
-let thirdPromo = <Element
+let thirdPromo = <PromoElement
     heading={'Онлайн-сервис доставки еды на дом'}
     text='Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком'
     class='first'
     id={2}
 />
 
-let fourPromo = <Element
+let fourPromo = <PromoElement
     heading='Быстрая и дешевая еда'
     text='Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком'
     class='second'
@@ -119,4 +119,4 @@ function PromoResult() {
 }
 
 
-export default PromoResult
+export default PromoResult;

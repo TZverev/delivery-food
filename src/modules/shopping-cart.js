@@ -282,7 +282,7 @@ const ShoppingCartFooter = observer((props) => {
 
     if (props.data.sum) {
         return (
-            <div>
+            <>
                 <Address />
                 <div className='shopping-cart-footer'>
                     {isMessageShown && <ConfirmMessage
@@ -309,12 +309,13 @@ const ShoppingCartFooter = observer((props) => {
                     </button>
                     </div>
                 </div>
-            </div>
+            </>
         )
     }
 
     return (
-        <div />
+        <>
+        </>
     )
 })
 
