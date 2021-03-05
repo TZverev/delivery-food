@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { observer } from "mobx-react-lite";
 import { orderHistory } from './account-data';
 import firebase from '../../firebase';
-import star from '../../img/rating-star.svg';
 
 const storage = firebase.storage();
 

@@ -12,9 +12,7 @@ import { observer } from 'mobx-react';
 export class Button extends Component {
     render() {
         return (
-            <button
-                className={`${this.props.class} button`}
-            >
+            <button className={`${this.props.class} button`} >
                 <img src={this.props.img} alt='user' />
                 <span>{this.props.value}</span>
             </button>
@@ -61,7 +59,7 @@ const Buttons = observer(({ data }) => {
             <div className='buttons'>
                 <Switch>
                     <Route path='/account'>
-                        <button
+                        <button aria-label='Выйти из личного кабинета'
                             className='primary-button header-button'
                             onClick={exit}>
                             <span>Выход</span>
@@ -77,7 +75,7 @@ const Buttons = observer(({ data }) => {
                         </Link>
                     </Route>
                 </Switch>
-                <button
+                <button aria-label='Корзина'
                     className='header-button'
                     onClick={showShoppingCart}>
                     <img src={shop} alt='user' />
@@ -92,13 +90,13 @@ const Buttons = observer(({ data }) => {
 
     return (
         <div className='buttons'>
-            <button
+            <button aria-label='Войти в личный кабинет'
                 className='primary-button button header-button'
                 onClick={showAuth}>
                 <img src={user} alt='user' />
                 <span>Войти</span>
             </button>
-            <button
+            <button aria-label='Корзина'
                 className='button header-button'
                 onClick={showShoppingCart}>
                 <img src={shop} alt='user' />
@@ -115,7 +113,7 @@ function Header() {
         <header>
             <div className='header'>
                 <Link to='/'>
-                    <img src={logo} alt='logo' />
+                    <img src={logo} alt='logo' aria-label='Вернуться на главную страницу' />
                 </Link>
                 <Buttons data={userData} />
             </div >

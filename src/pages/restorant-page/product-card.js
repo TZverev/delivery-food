@@ -26,6 +26,7 @@ const ButtonShoppingCart = observer((props) => {
 
     return (
         <button className='button primary-button shopping-cart-button'
+            aria-label={`Добавить ${props.product.name} в корзину`}
             onClick={() => {
                 productsData.addProduct(props);
             }}>
@@ -40,7 +41,8 @@ export function LowButtons(props) {
         <div className='low-button-contanier'>
             <button onClick={() => {
                 productsData.removeProduct(props.product.id)
-            }} className='low-button'>
+            }} className='low-button'
+            >
                 -
                 </button>
             <p>

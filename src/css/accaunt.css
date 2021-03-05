@@ -35,15 +35,14 @@
     justify-content: flex-end;
 }
 
+.form-control-pass{
+    display: flex;
+    justify-content: space-between;
+}
+
 .input {
     width: 100%;
 }
-
-.first-input-pass{
-    width: 50%;
-    margin-right: 32px;
-}
-
 
 .error-message {
     font-style: normal;
@@ -213,5 +212,29 @@
     .order-item-right .sum-price{
         margin: 0;
         font-size: 16px;
+    }
+
+    .auth-box {
+        width: 100%;
+    }
+
+    .auth-background{
+        background: #FFFFFF;
+    }
+
+    .form-box{
+        min-width: 0;
+    }
+
+    .form-control{
+        justify-content: center;
+    }
+
+    .form-control-pass{
+        flex-direction: column;
+    }
+
+    .first-input-pass{
+        margin-bottom: 8px;
     }
 }

@@ -1,33 +1,15 @@
 import { observer } from 'mobx-react';
 import { autorun, makeAutoObservable, toJS } from "mobx";
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
 import '../css/shopping-cart.css';
 import { LowButtons } from '../pages/restorant-page/product-card.js';
+import Modal from '../modules/modal';
 import ConfirmMessage from '../modules/confirm-message.js';
 import { userData } from '../pages/account/account-data';
 import { db } from '../firebase';
 import { LoadingOutlined } from '@ant-design/icons';
 import Address from './address-finder';
 
-export function Modal(props) {
-
-    const modalRoot = document.getElementById('modal-root');
-    const element = document.createElement('div');
-
-    useEffect(() => {
-        modalRoot.appendChild(element);
-        return () => {
-            modalRoot.removeChild(element);
-        }
-    })
-
-    return ReactDOM.createPortal(
-        props.children,
-        element,
-    )
-
-}
 
 export function localStorageUpload(props) {
     sessionStorage.setItem(props.prodRef.id, 1)
@@ -197,12 +179,6 @@ const ShoppingCartList = observer((props) => {
     )
 })
 
-export function scrollBar() {
-    const documentWidth = parseInt(document.documentElement.clientWidth);
-    const windowsWidth = parseInt(window.innerWidth);
-    return windowsWidth - documentWidth
-}
-
 const OrderButton = observer(({ orderData, createOrder, isLoadingOrder }) => {
 
     const [isDisabled, setIsDisabled] = useState(true);
@@ -277,7 +253,6 @@ const ShoppingCartFooter = observer((props) => {
         } else {
             return
         }
-
     }
 
     if (props.data.sum) {
@@ -321,28 +296,17 @@ const ShoppingCartFooter = observer((props) => {
 
 function ShoppingCart(props) {
 
-    useEffect(() => {
-        document.body.style.marginRight = scrollBar() + 'px';
-        document.body.style.overflow = 'hidden';
-        return () => {
-            document.body.style.marginRight = -scrollBar() + 'px';
-            document.body.style.overflow = '';
-        }
-    })
-
     return (
-        <Modal>
-            <div className='shopping-cart-background'>
-                <div className='shopping-cart-box'>
-                    <div className='shopping-cart-header'>
-                        <h2>Корзина</h2>
-                        <div className='closeButton' onClick={props.onClick}>
-                            ╳
-                        </div>
-                    </div>
-                    <ShoppingCartList data={productsData} />
-                    <ShoppingCartFooter data={productsData} />
+        <Modal close={props.onClick}>
+            <div className='shopping-cart-box'>
+                <div className='shopping-cart-header'>
+                    <h2>Корзина</h2>
+                    <button className='closeButton' onClick={props.onClick}>
+                        ╳
+                        </button>
                 </div>
+                <ShoppingCartList data={productsData} />
+                <ShoppingCartFooter data={productsData} />
             </div>
         </Modal>
     )

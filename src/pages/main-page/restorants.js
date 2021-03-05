@@ -143,7 +143,7 @@ function RestorantCard(props) {
     }
 
     return (
-        <Link to={`/restorant/${props.id}`}>
+        <Link to={`/restorant/${props.id}`} aria-label={`Ресторан ${props.data.name}`}>
             <div className='restorant-card'>
                 <img className='restorant-img'
                     src={img}

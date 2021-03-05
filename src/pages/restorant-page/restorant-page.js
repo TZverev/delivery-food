@@ -159,13 +159,7 @@ const Page = observer(({ restorant, productData }) => {
 
     useEffect(() => {
         if (productData.wouldChangeRestorant) {
-            document.body.style.marginRight = scrollBar() + 'px';
-            document.body.style.overflow = 'hidden';
             showMessage();
-        }
-        return () => {
-            document.body.style.marginRight = -scrollBar() + 'px';
-            document.body.style.overflow = '';
         }
     }, [productData.wouldChangeRestorant]);
 
@@ -185,6 +179,7 @@ const Page = observer(({ restorant, productData }) => {
                 message='Хотите очистить корзину и сменить ресторан?'
                 yesClick={yesFunction}
                 noClick={noFunction}
+                onClose={() => { setIsMessageShown(false) }}
             />}
             <main>
                 <div className='restorant-page-header'>

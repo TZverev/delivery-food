@@ -7,13 +7,13 @@ export default function Address() {
     const [lastRequest, setLastRequest] = useState(null);
     const [addressList, setAddressList] = useState([]);
     const [isAddrerssListHidden, setIsAddressListHidden] = useState(true);
-    const [isAddressSelected, setIsAddressSelected] = useState(false);
+    //const [isAddressSelected, setIsAddressSelected] = useState(false);
 
     useEffect(() => {
         if (value === '') {
             setAddressList([]);
             setIsAddressListHidden(true);
-            clearTimeout(lastRequest);
+            //clearTimeout(lastRequest);
             productsData.addAddress(null);
         }
     }, [value]);
@@ -82,7 +82,7 @@ export default function Address() {
                     <li
                         className='address-message'>
                         Выберете варинат или продолжите ввод
-                </li>
+                        </li>
                     {addressList.map((doc) => {
                         return (
                             <li

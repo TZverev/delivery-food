@@ -109,11 +109,3 @@ class OrderData {
         this.time = time
     }
 }
-
-class RestorantsImgs {
-    imgList = [];
-
-    imgCheck(id) {
-        this.imgList.find(item => item.id === id)
-    }
-}

@@ -1,51 +1,14 @@
 import firebase from '../../firebase';
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import Modal from '../modal';
 import '../../css/accaunt.css';
 import { userData } from '../../pages/account/account-data';
 import { observer } from "mobx-react-lite";
 
-function Modal(props) {
-
-    const modalRoot = document.getElementById('modal-root');
-    const element = document.createElement('div');
-
-    useEffect(() => {
-        modalRoot.appendChild(element);
-        return () => {
-            modalRoot.removeChild(element);
-        }
-    })
-
-    return ReactDOM.createPortal(
-        props.children,
-        element,
-    )
-
-}
-
-function scrollBar() {
-    const documentWidth = parseInt(document.documentElement.clientWidth);
-    const windowsWidth = parseInt(window.innerWidth);
-    return windowsWidth - documentWidth
-}
-
 export default function Auth(props) {
-
-    useEffect(() => {
-        document.body.style.marginRight = scrollBar() + 'px';
-        document.body.style.overflow = 'hidden';
-        return () => {
-            document.body.style.marginRight = -scrollBar() + 'px';
-            document.body.style.overflow = '';
-        }
-    })
-
     return (
-        <Modal>
-            <div className='auth-background'>
-                <AuthBox data={userData} close={props.onClick} />
-            </div>
+        <Modal close={props.onClick}>
+            <AuthBox data={userData} close={props.onClick} />
         </Modal>
     )
 }
@@ -379,7 +342,7 @@ function Registration(props) {
             <p className='error-message'>
                 {errorEmail}
             </p>
-            <div className='form-control'>
+            <div className='form-control-pass'>
                 <input
                     value={password}
                     type='password'

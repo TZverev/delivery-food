@@ -134,4 +134,16 @@
     .shopping-cart-prod-right .sum-price {
         display: none;
     }
+
+    .suggestions-wrapper{
+        min-width: 335px;
+    }
 }
+
+@media screen and (max-width:375px) {
+    
+    .suggestions-wrapper{
+        min-width: 300px;
+    }
+}
+    

@@ -1,7 +1,6 @@
 *{
   margin: 0;
   text-decoration: none;
-  outline: none;
 }
 
 h1,h2,p{
@@ -107,10 +106,6 @@ button:disabled {
   border: none;
   opacity: .6;
   cursor: not-allowed;
-}
-
-button:focus {
-  outline: none;
 }
 
 button {
