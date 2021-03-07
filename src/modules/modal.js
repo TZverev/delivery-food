@@ -13,11 +13,19 @@ function Modal(props) {
     useEffect(() => {
         document.body.style.marginRight = scrollBar() + 'px';
         document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', (e) => { onEscClose(e) });
         return () => {
             document.body.style.marginRight = -scrollBar() + 'px';
             document.body.style.overflow = '';
+            document.removeEventListener('keydown', (e) => { onEscClose(e) });
         }
     })
+
+    function onEscClose(e) {
+        if (e.code === 'Escape') {
+            props.close()
+        }
+    }
 
     function close(e) {
         if (e.target === e.currentTarget) {

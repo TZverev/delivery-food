@@ -9,7 +9,6 @@ import '../../css/restorants.css';
 import { ProductCard } from './product-card';
 import ConfirmMessage from '../../modules/confirm-message.js';
 import { productsData } from '../../modules/shopping-cart.js';
-import { scrollBar } from '../../modules/shopping-cart';
 
 
 const db = firebase.firestore();
