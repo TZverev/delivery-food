@@ -7,9 +7,11 @@
 
 ### На сайте реализована: 
 - Подгрузка ресторанов. 
-![alt text](screenshots/main-page.png "Страница ресторанов")
+![alt text](screenshots/main-page.png "Страница с ресторанами")
 - Страниц ресторанов с блюдами.
+![alt text](screenshots/restorant-page.png "Страница ресторана")
 - Личный кабинет с историей заказов.
 - Корзина с текущим заказом.
+![alt text](screenshots/shopping-cart.png "Коризна")
 - Сайт адаптирован под телефоны.
 
