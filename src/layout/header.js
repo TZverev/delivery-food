@@ -6,7 +6,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import ShoppingCart from '../modules/shopping-cart.js';
 import Auth from '../modules/account/auth';
 import firebase from '../firebase';
-import { userData } from '../pages/account/account-data';
+import { userData } from '../store/account-data';
 import { observer } from 'mobx-react';
 
 export class Button extends Component {

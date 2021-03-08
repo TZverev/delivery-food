@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { productsData } from './shopping-cart';
+import { productsData } from '../store/shoppingCart-data';
 
 export default function Address() {
 

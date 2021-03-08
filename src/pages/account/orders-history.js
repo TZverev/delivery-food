@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { observer } from "mobx-react-lite";
-import { orderHistory } from './account-data';
+import { orderHistory } from '../../store/account-data';
 import firebase from '../../firebase';
 
 const storage = firebase.storage();

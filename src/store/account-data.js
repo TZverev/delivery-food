@@ -1,5 +1,5 @@
 import { makeAutoObservable, flow } from 'mobx';
-import firebase, { db } from '../../firebase';
+import firebase, { db } from '../firebase';
 
 class UserData {
     isLoading = true;

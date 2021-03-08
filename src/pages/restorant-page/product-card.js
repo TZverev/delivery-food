@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { observer } from "mobx-react-lite";
 import firebase from '../../firebase';
-import { restorantData } from './restorant-page';
-import { productsData } from '../../modules/shopping-cart.js';
+import { restorantData } from '../../store/restorant-data';
+import { productsData } from '../../store/shoppingCart-data';
 import '../../css/restorant-page.css';
 import '../../css/restorants.css';
 import shop from '../../img/shop-white.svg';
-
 
 const storage = firebase.storage();
 

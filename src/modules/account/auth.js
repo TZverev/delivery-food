@@ -2,7 +2,7 @@ import firebase from '../../firebase';
 import React, { useEffect, useState } from 'react';
 import Modal from '../modal';
 import '../../css/accaunt.css';
-import { userData } from '../../pages/account/account-data';
+import { userData } from '../../store/account-data';
 import { observer } from "mobx-react-lite";
 
 export default function Auth(props) {

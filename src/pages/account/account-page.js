@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { observer } from "mobx-react-lite";
 import firebase from '../../firebase';
 import { EditOutlined, CheckOutlined } from '@ant-design/icons';
-import { userData } from './account-data';
+import { userData } from '../../store/account-data';
 import HistoryOfOrders from './orders-history';
 import '../../css/shopping-cart.css';
 
